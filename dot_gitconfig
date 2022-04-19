@@ -1,0 +1,15 @@
+[user]
+	name = luke
+	email = lminer@gmail.com
+[push]
+	default = current 
+[core]
+	editor = vim
+	autocrlf = input
+[alias]
+    new="!f() { git checkout -b lim-$1-`date '+%Y.%m.%d'`; git push -u origin; }; f" # Create a new branch with prefix.
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
