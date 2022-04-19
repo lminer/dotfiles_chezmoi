@@ -1,7 +1,7 @@
 #!/bin/sh
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-sudo add-apt-repository ppa:jonathonf/vim
+sudo add-apt-repository ppa:jonathonf/vim -y
 apt-get update
 sudo apt-get install -y fzf cargo tmux zsh vim wget
 
